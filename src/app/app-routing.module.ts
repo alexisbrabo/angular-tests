@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { HomeComponent } from './home/home.component';
+import { DataReactiveFormComponent } from './data-reactive-form/data-reactive-form.component';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'form', component: DataReactiveFormComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
