@@ -19,7 +19,7 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private router: Router,
     private coursesService: CoursesService
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.subscription = this.route.params.subscribe(
@@ -28,7 +28,7 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
 
         this.course = this.coursesService.getCourse(this.id);
 
-        if (this.course == null){
+        if (this.course == null) {
           this.router.navigate(['/course/notFound']);
         }
       }
