@@ -1,13 +1,25 @@
 <nav>
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo right">Logo</a>
+    <a routerLink="/home" class="brand-logo right">Logo</a>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">JavaScript</a></li>
+      <li routerLinkActive="active">
+        <a routerLink="/login">Login</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/courses">Courses</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['course', idCurso.value]">Course With Id</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/form">Form</a>
+      </li>
     </ul>
   </div>
 </nav>
 
-
-<router-outlet></router-outlet>
+<div class="container">
+  <p>Entre com o id do curso:</p>
+  <input #idCurso>
+  <router-outlet></router-outlet>
+</div>
