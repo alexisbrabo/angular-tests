@@ -2,9 +2,14 @@
   Courses List
 </p>
 
+<p>
+  Página: {{ page }}
+</p>
+
 <div class="collection">
-  <a class="collection-item" *ngFor="let course of courses"
-  [routerLink]="['/course', course.id]">
+  <a class="collection-item" *ngFor="let course of courses" [routerLink]="['/course', course.id]">
     {{ course.name }}
   </a>
 </div>
+
+<button class="waves-effect waves-light btn" (click)="nextPage()">Next Page</button>

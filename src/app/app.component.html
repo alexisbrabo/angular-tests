@@ -6,7 +6,7 @@
         <a routerLink="/login">Login</a>
       </li>
       <li routerLinkActive="active">
-        <a routerLink="/courses">Courses</a>
+        <a routerLink="/courses" [queryParams]="{page:1}">Courses</a>
       </li>
       <li routerLinkActive="active">
         <a [routerLink]="['course', idCurso.value]">Course With Id</a>

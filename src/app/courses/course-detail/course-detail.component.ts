@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-import { CoursesService } from '../courses/courses.service';
+import { CoursesService } from '../courses.service';
 
 @Component({
   selector: 'app-course-detail',
@@ -29,7 +29,7 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
         this.course = this.coursesService.getCourse(this.id);
 
         if (this.course == null) {
-          this.router.navigate(['/course/notFound']);
+          this.router.navigate(['/notFound']);
         }
       }
     );
