@@ -6,10 +6,7 @@ import { AppComponent } from './app.component';
 import { DataReactiveFormComponent } from './data-reactive-form/data-reactive-form.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { CoursesComponent } from './courses/courses.component';
-import { CourseDetailComponent } from './courses/course-detail/course-detail.component';
-import { CoursesService } from './courses/courses.service';
-import { CourseNotFoundComponent } from './courses/course-not-found/course-not-found.component';
+import { CoursesModule } from './courses/courses.module';
 
 @NgModule({
   declarations: [
@@ -17,17 +14,13 @@ import { CourseNotFoundComponent } from './courses/course-not-found/course-not-f
     DataReactiveFormComponent,
     HomeComponent,
     LoginComponent,
-    CoursesComponent,
-    CourseDetailComponent,
-    CourseNotFoundComponent
   ],
   imports: [
     BrowserModule,
+    CoursesModule,
     AppRoutingModule
   ],
-  providers: [
-    CoursesService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
